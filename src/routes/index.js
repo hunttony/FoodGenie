@@ -31,13 +31,23 @@ router.get('/contact', function(req, res) {
   res.render('components/contact', { title: 'Your Restaurant | Contact Us' });
 });
 
-router.get('/investors', function(req, res) {
-  res.render('components/investors', { title: 'Your Restaurant | Investors' });
+router.get('/investor', function(req, res) {
+  res.render('components/investor', { title: 'Your Restaurant | Investors' });
 });
 
 router.get('/order', function(req, res) {
   res.render('components/orders', { title: 'Your Restaurant | Place Your Order' });
 });
+
+router.get('/employment', function(req, res) {
+  res.render('components/employmentapp', { title: 'Your Restaurant | Get Hired!' });
+});
+
+
+
+
+
+
 
 
 

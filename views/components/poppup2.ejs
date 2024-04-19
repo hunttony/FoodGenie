@@ -1,0 +1,92 @@
+<style>
+  .modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4); /* Semi-transparent background */
+}
+
+.modal-content {
+  justify-items: center;
+  background-color: rgba(0, 0, 0, 0.8);
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  border-radius: 10px;
+  width: 80%;
+  max-width: 600px;
+  position: relative;
+}
+
+.close {
+  color: #d6d6d6;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: rgb(255, 0, 0);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.subscribe-btn {
+  display: inline-block;
+  padding: 5px 10px;
+  background-color: #000000;
+  color: #fff;
+  text-decoration: none;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.subscribe-btn:hover{
+  box-shadow: 2px 2px 3px rgba(255, 255, 255, .8);
+}
+
+
+
+</style>
+
+<button class="subscribe-btn" id="open-modal">Subscribe</button>
+
+<div id="modal" class="modal">
+  <div class="modal-content">    
+    <span class="close">&times;</span>
+    <%- include('subscribe2.ejs') %>   
+
+  </div>
+</div>
+
+<script>
+  // Get the button and the modal
+var openModalBtn = document.getElementById('open-modal');
+var modal = document.getElementById('modal');
+
+// When the user clicks the button, display the modal
+openModalBtn.onclick = function() {
+  modal.style.display = 'block';
+};
+
+// When the user clicks on the close button, close the modal
+var closeBtn = document.getElementsByClassName('close')[0];
+closeBtn.onclick = function() {
+  modal.style.display = 'none';
+};
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = 'none';
+  }
+};
+
+</script>

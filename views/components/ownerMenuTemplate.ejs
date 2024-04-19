@@ -1,0 +1,121 @@
+<style>
+  .menu-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    margin: 10px;
+    justify-self: center;
+    border-radius: 20px;
+    transition: transform 0.2s ease;
+    
+  }
+
+  .menu-item h2{
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: #ffa600;
+    
+    padding: 5px;
+    border-radius: 10px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #ffa600;
+    background-color: rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 10px 0 rgba(255, 255, 255, 0.95);;
+  }
+  .menu-item:hover {
+    transform: scale(1.1);
+  }
+  
+  .menu-item img { 
+    border-radius: 10px;
+    border-style: solid;
+    border-width: 1px;    
+    transition: transform 0.2s ease;
+    width: 80%;
+  }
+  .menu-item-details {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    margin-top: 5px;
+  }
+  .menu-item-details h3 {
+    margin-top: 0;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif;
+    text-shadow: 1px 1px 3px rgba(255, 0, 0, 0.8);
+  }
+  .menu-item-details p {
+    margin: 10px 0;
+    font-size: 16px;
+    line-height: 1.5;
+    text-shadow: 2px 2px 3px rgba(255, 0, 0, 0.8);
+  }
+
+  .buy-now-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ff7b00;
+    color: #000000;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 10px 0 0 30px;
+  }
+
+  .background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    border-radius: 20px;
+  }
+
+  .buy-now-btn:hover{
+    background-color: #ff1e00;
+    color: #000000;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(255, 255, 255, 0.8);
+  }
+</style>
+<video class="background-video" autoplay loop muted>
+  <source src="video/hero-video.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
+<div class="menu-item animate__animated animate__fadeInLeft">
+  <h2>Bob's Burgers Barn</h2>
+  <img src="images/classic-burger.jpg" alt="Menu Item 1">
+  <div class="menu-item-details">
+    <h3  class="animated-heading animate__animated animate__10s animate__shakeX animate__slower 10s anmate__delay-10s">Delicious Classic Burger<p>Price: $10.00</p></h3>
+    <p>This mouth-watering burger is made with the finest ingredients, including a juicy beef patty, fresh lettuce, ripe tomatoes, and melted cheese. Served on a toasted bun with a side of crispy fries.</p>
+    <p><strong>Nutritional Values:</strong></p>
+    <p>Calories: 500</p>
+    <p>Protein: 25g</p>
+    <p>Fat: 20g</p>
+    <p>Carbs: 40g</p>
+    <%- include("offers") %>
+
+    <button class="buy-now-btn animate__animated animate__infinite animate__slow animate__jello">Eat Now</button>
+  </div>
+</div>
+
+<!-- Add more menu items as needed -->
+
+

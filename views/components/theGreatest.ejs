@@ -1,0 +1,160 @@
+<!-- restaurants.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+
+  body {
+      background-color: #000000;
+      color: #ffffff;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      
+  }
+  /* Add your CSS styles for responsiveness and attractiveness here */
+  .greats {
+    display: flex;
+    flex-wrap: wrap;
+    padding : 10px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    
+  }
+
+  .greats h1  {
+      margin-top: 0;
+      color: lightgrey;
+  }
+  .greats p {
+      margin-bottom: 10px;
+  }
+  .restaurant {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 5px;
+      width: 30%; /* Adjust max-width as needed */
+      height: 300px;  
+      background-color: rgba(48, 48, 48, 0.5);
+      box-shadow: 0 0 5px  rgba(255, 255, 255, 0.5);
+      border-radius: 10px;
+      padding: 10px;
+      text-align: center;
+  }
+     /* border: 1px solid #ff5e00;
+      border-radius: 5px;
+      padding: 20px;
+      margin-bottom: 20px;
+  } */
+
+  .owners-modal {
+display: none;
+position: fixed;
+z-index: 1000;
+left: 0;
+top: 0;
+width: 100%;
+height: 100%;
+overflow: auto;
+background-color: rgba(0, 0, 0, 0.4);
+transition: all 1s; /* Semi-transparent background */
+}
+
+.owners-modal-content {
+justify-items: center;
+background-color: rgba(0, 0, 0, 0.8);
+
+margin: 15% auto;
+padding: 30px;
+border: 1px solid #888;
+border-radius: 10px;
+width: 80%;
+max-width: 600px;
+position: relative;
+transform: slideIn 0.3s;
+
+transition: all 1s;
+}
+
+.owners-close {
+color: #d6d6d6;
+float: right;
+font-size: 28px;
+font-weight: bold;
+}
+
+.owners-close:hover,
+.owners-close:focus {
+color: rgb(255, 0, 0);
+text-decoration: none;
+cursor: pointer;
+}
+
+.owners-btn {
+text-decoration: none;
+font-size: 16px;
+color: #ffffff;
+font-weight: bold;
+font-family: "Lumanosimo", cursive;
+font-weight: 600;
+font-style: normal;
+transition: all 0.15s ease-in-out;
+background: none;
+border: none; 
+}
+
+.owners-btn:hover{
+text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.8);
+cursor: pointer;
+}
+  /* Add more styles as needed */
+</style>
+<body>
+  <%- include('header2.ejs') %>
+  <div id="greats-modal" class="greats-modal">
+    <div class="greats-modal-content">    
+  
+    
+
+      <h1>Great Places to Eat - Houston</h1>
+     
+        <div class="greats">
+          <% restaurants.forEach(function(restaurant) { %>
+              <div class="restaurant">
+                  <h2><a href="<%= restaurant.link %>"><%= restaurant.name %></a></h2>
+                  <p><%= restaurant.snippet %></p>
+              </div>
+            
+          <% }); %>
+      </div>
+    
+      </div>
+</body>
+</html>
+    <script>
+      var openGreatsModalBtn = document.getElementById('open-greats-modal');
+      var greatsModal = document.getElementById('greats-modal');
+    
+      openGreatsModalBtn.onclick = function() {
+        greatsModal.style.display = 'block';
+      };
+    
+      var greatsCloseBtn = document.getElementsByClassName('greats-close')[0];
+      greatsCloseBtn.onclick = function() {
+        greatsModal.style.display = 'none';
+      };
+    
+      window.onclick = function(event) {
+        if (event.target == greatsModal) {
+          greatsModal.style.display = 'none';
+        }
+      };
+    </script>
+

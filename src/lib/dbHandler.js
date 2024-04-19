@@ -16,9 +16,17 @@ async function readDb() {
 }
 
 // Function to write the updated data back to the database
-async function writeDb(db) {
+async function writeDb(newData) {
   try {
-    await fs.writeFile(DB_PATH, JSON.stringify(db, null, 2), 'utf8');
+    // Read existing data from the database
+    const existingData = await readDb();
+
+    // Merge the existing data with the new data
+    const updatedData = { ...existingData, ...newData };
+
+    // Write the updated data back to the database file
+    await fs.writeFile(DB_PATH, JSON.stringify(updatedData, null, 2), 'utf8');
+
     return true;
   } catch (error) {
     console.error('Error writing to database:', error);

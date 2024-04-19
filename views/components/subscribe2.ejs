@@ -1,0 +1,68 @@
+<style>
+.subscribe {
+ 
+  padding: 20px 0;
+}
+
+.subscribe .container {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.subscribe h3 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.subscribe form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.subscribe input[type="email"] {
+  width: 70%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  background-color: bisque;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+.subscribe button {
+  padding: 10px 20px;
+  background-color: #ff4d00;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.subscribe button:hover {
+  background-color: #e63e00;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+  .subscribe input[type="email"] {
+    width: 60%;
+  }
+
+  .subscribe button {
+    padding: 10px 15px;
+  }
+}
+
+</style>
+<div class="subscribe">
+  <div class="container">
+    <p>Embark on a tantalizing journey of culinary delights! Subscribe now to our food newsletter and unlock a world of mouth-watering recipes, insider tips, and exclusive offers delivered straight to your inbox. Join our community of food enthusiasts today and elevate your dining experience to new heights!</p>
+    <form id="subscribe-form">
+      <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+      <button type="submit">Subscribe</button>
+    </form>
+  </div>
+</div>
+

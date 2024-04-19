@@ -1,0 +1,264 @@
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Lumanosimo&family=Roboto:wght@400;700&family=Rubik+Scribble&display=swap');
+/* Header Styles */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #dd4200ee;
+  box-shadow: 0 3px 10px rgb(255, 255, 255);
+  transition: all 0.3s ease;
+  margin: 0;
+  
+  
+}
+
+.header:hover{
+  background-color: #e60000;
+  box-shadow: 0 3px 10px rgba(255, 164, 26, 0.836);
+}
+
+.logo a{
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.85);
+  color: white;
+  font-family: "Lumanosimo", cursive;
+  font-size: 16px; 
+  font-weight: 600;
+  font-style: italic;
+  transition: scale 1s ease-in-out;
+  text-decoration: none;
+}
+
+.logo:hover{
+  transform: scale(1.05);
+}
+
+.logo img {
+  height: 40px;
+}
+
+.menu {
+  
+  justify-content: flex-end;
+  align-items: center;
+  height: 100%;
+}
+
+.menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.menu li {
+  margin-right: 10px;
+}
+
+.menu li:last-child {
+  margin-right: 0;
+}
+
+.menu a {
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: bold;
+  font-family: "Lumanosimo", cursive;
+  font-weight: 400;
+  font-size: .9em;
+  font-style: normal;
+  transition: all 0.15s ease-in-out; 
+}
+
+.menu a:hover{
+  text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.8);
+  transform: scale(1.15);
+}
+
+.menu-toggle {
+  cursor: pointer;
+}
+
+.hamburger {
+  cursor: pointer;
+  width: 30px;
+  height: 3px;
+  background-color: #000000;
+  position: relative;
+  box-shadow: 0 3px 10px rgba(255, 0, 0, .8);
+}
+
+.hamburger::before,
+.hamburger::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  background-color: #797979;
+}
+
+.hamburger::before {
+  top: -8px;
+}
+
+.hamburger::after {
+  bottom: -8px;
+}
+
+/* Menu Panel Styles */
+.menu-panel {
+  position: fixed;
+  top: 106px;
+  right: -100%;
+  width: 70%;
+  max-width: 300px; /* Adjust menu width as needed */
+  height: 100%;
+  background-color: rgba(230, 65, 0, .95);
+  box-shadow: -2px 0 10px rgba(0, 0, 0, 0.5);
+  z-index: 999;
+  transition: right 0.3s ease;
+  border-radius: 5px 0 0 5px;
+}
+
+.menu-panel.active {
+  right: 0;
+}
+
+.menu-panel nav {
+  padding-top: 70px; /* Adjust for header height */
+}
+
+.menu-panel ul {
+  padding-left: 20px;
+}
+
+.menu-panel a {
+  display: block;
+  padding: 15px 0;
+  color: #000000;
+  font-weight: bold;
+  border-bottom: 1px solid #eee;
+}
+
+.menu-panel a:hover{
+  text-shadow: 2px 2px 3px rgba(255, 255, 255, 0.8);
+  
+}
+
+/* Content Styles */
+.content {
+  
+  margin-top: 70px; /* Adjust for header height */
+  transition: margin-left 0.3s ease;
+}
+
+.menu-open .content {
+  margin-left: 70%; /* Adjust for menu width */
+}
+
+
+</style>
+
+<header class="header">
+  <div class="logo">
+    <h3><a href="\">Food Genie</a></h3>
+  </div>
+  <nav class="menu">
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Best In</a></li>
+      <li><%- include("menus2") %></li>
+      <li><a href="#">Events</a></li>
+      <li><a href="#" id="open-greats-modal">Great Places</a></li>
+      <li><%- include("popupOwners") %></li>
+      <li><%- include("poppup2") %></li>
+      <!-- Add more menu items as need/ed -->
+    </ul>
+    
+  </nav>
+  <div class="menu-toggle">
+    <div class="hamburger"></div>
+  </div>
+</header>
+
+<div class="menu-panel">
+  <nav>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Best In</a></li>
+      <li><%- include("menus2") %></li>
+      <li><a href="#">Specials</a></li>
+      <li><a href="/great/great" id="open-greats-modal">The Greatest!</a></li>
+      <li><%- include("popupOwners") %></li>
+      <li><%- include("poppup2") %></li>
+      
+      <!-- Add more menu items as needed -->
+    </ul>
+  </nav>
+</div>
+
+<div class="content">
+  <!-- Your website content here -->
+</div>
+
+
+
+
+<script>
+const menuToggle = document.querySelector('.menu-toggle');
+const menuPanel = document.querySelector('.menu-panel');
+const header = document.querySelector('.header');
+const content = document.querySelector('.content');
+
+menuToggle.addEventListener('click', () => {
+  menuPanel.classList.toggle('active');
+  header.classList.toggle('menu-open');
+  content.classList.toggle('menu-open');
+  console.log('clicked');
+});
+
+
+// JavaScript code to open the popup immediately when the link is clicked
+const openGreatsModalBtn = document.getElementById('open-greats-modal');
+const greatsModal = document.getElementById('greats-modal');
+
+openGreatsModalBtn.addEventListener('click', async () => {
+  try {
+    const response = await fetch('/great'); // Assuming the route is defined in your backend
+    const { restaurants } = await response.json();
+    // Render the fetched restaurants in the popup modal
+    greatsModal.innerHTML = ''; // Clear previous content
+    restaurants.forEach(restaurant => {
+      const restaurantElement = document.createElement('div');
+      restaurantElement.innerHTML = `
+        <div class="restaurant">
+          <h2><a href="${restaurant.link}">${restaurant.name}</a></h2>
+          <p>${restaurant.snippet}</p>
+        </div>
+      `;
+      greatsModal.appendChild(restaurantElement);
+    });
+    // Open the popup modal
+    greatsModal.style.display = 'block';
+  } catch (error) {
+    console.error('Error fetching restaurants:', error);
+    // Handle error
+  }
+});
+
+const greatsCloseBtn = document.querySelector('.greats-close');
+
+greatsCloseBtn.addEventListener('click', () => {
+  greatsModal.style.display = 'none';
+});
+
+window.addEventListener('click', (event) => {
+  if (event.target == greatsModal) {
+    greatsModal.style.display = 'none';
+  }
+});
+
+</script>
+
+

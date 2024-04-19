@@ -1,0 +1,98 @@
+<h1>Employment Application</h1>
+<div class="container">   
+<form class="contact-form" action="/employmentapp/employmentapp" method="POST">
+    <!-- Personal Information -->
+    <h2>Personal Information</h2>
+    <label for="name">Full Name:</label>
+    <input type="text" id="name" name="name" required>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="phone">Phone Number:</label>
+    <input type="tel" id="phone" name="phone" required>
+
+    <!-- Availability -->
+    <h2>Availability</h2>
+    <label for="days_available">Days Available:</label>
+    <input type="text" id="days_available" name="days_available" placeholder="e.g., Monday, Tuesday" required>
+
+    <label for="hours_available">Hours Available:</label>
+    <input type="text" id="hours_available" name="hours_available" placeholder="e.g., 9:00 AM - 5:00 PM" required>
+
+    <!-- Previous Employment -->
+    <h2>Previous Employment</h2>
+    <label for="previous_employer">Previous Employer:</label>
+    <input type="text" id="previous_employer" name="previous_employer">
+
+    <label for="previous_position">Position:</label>
+    <input type="text" id="previous_position" name="previous_position">
+
+    <label for="previous_duration">Duration of Employment:</label>
+    <input type="text" id="previous_duration" name="previous_duration">
+
+    <button class="btn btn-primary" type="submit" >Submit Application</button>
+</form>
+</div>
+<div class="employmentapp-success" id="employmentappSuccessMessage" style="display: none;">
+  <h2>Thank You!</h2>
+  <p>Your application has been successfully submitted.</p>
+  <p>Name: <span id="submittedName"></span></p>
+  <p>Email: <span id="submittedEmail"></span></p>
+  <p>Phone: <span id="submittedPhone"></span></p>
+  <p>Days available: <span id="submittedDays_available"></span></p>
+  <p>Hours available: <span id="submittedHours_available"></span></p>
+  <p>Previous employer: <span id="submittedPrevious_employer"></span></p>
+  <p>Previous_duration: <span id="submittedPrevious_position"></span></p>
+  
+</div>
+
+
+<script>
+// Function to show the success message
+function showFormSuccess() {
+  document.getElementById('employmentappSuccessMessage').style.display = 'block';
+}
+
+// Function to handle form submission
+document.getElementById('employmentappForm').addEventListener('submit', function(event) {
+  event.preventDefault(); // Prevent the default form submission
+
+  // Get form data
+  const name = document.getElementById('name').value;
+  const email = document.getElementById('email').value;
+  const phone = document.getElementById('phone').value;
+  const company = document.getElementById('company').value;
+  const role = document.getElementById('role').value;
+  const investment = document.getElementById('investment').value;
+  const message = document.getElementById('message').value;
+
+  // Send the form data to the server using AJAX or fetch
+  fetch('/submit_application', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({ name, email, phone, company, role, investment, message })
+  })
+  .then(response => {
+    if (response.ok) {
+      // Show the success message
+      showFormSuccess();
+      // Clear the form fields
+      document.getElementById('name').value = '';
+      document.getElementById('email').value = '';
+      document.getElementById('phone').value ='';
+      document.getElementById('company').value = "";
+      document.getElementById('role').value = "";
+      document.getElementById('investment').value = "";
+      document.getElementById('message').value = '';
+    } else {
+      console.error('Failed to submit form:', response.statusText);
+    }
+  })
+  .catch(error => {
+    console.error('Error submitting form:', error);
+  });
+});
+</script>

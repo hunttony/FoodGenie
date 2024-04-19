@@ -1,4 +1,16 @@
 {
+  "subscribe": [
+    
+  ],
+  "contact": [],
+  "investor": [],
+  "orders": [],
+  "comments": [],
+  "menus": [],
+  "employmentapp": [],
+  "users": [],
+  "posts": [],
+  "inquiries": [],
   "menuCategories": [
     {
       "id": 1,
@@ -76,6 +88,62 @@
               "description": "Fanta.",
               "price": 2.99,
               "image": "images/fanta.jpg",
+              "tags": "Sodas"
+            },
+            {
+              "id": 10,
+              "name": "Mountain Dew",
+              "description": "A citrus-flavored soda with a bold kick of caffeine.",
+              "price": 2.99,
+              "image": "[Link to Mountain Dew image]",
+              "tags": "Sodas"
+            },
+            {
+              "id": 11,
+              "name": "Pepsi",
+              "description": "Pepsi, the classic cola beverage with a refreshing taste.",
+              "price": 2.99,
+              "image": "[Link to Pepsi image]",
+              "tags": "Sodas"
+            },
+            {
+              "id": 12,
+              "name": "Dr Pepper",
+              "description": "Dr Pepper, a unique blend of 23 flavors that make up its distinct taste.",
+              "price": 2.99,
+              "image": "[Link to Dr Pepper image]",
+              "tags": "Sodas"
+            },
+            {
+              "id": 13,
+              "name": "7UP",
+              "description": "Crisp and clear, 7UP delivers a refreshing lemon-lime flavor.",
+              "price": 2.99,
+              "image": "[Link to 7UP image]",
+              "tags": "Sodas"
+            },
+            {
+              "id": 14,
+              "name": "A&W Root Beer",
+              "description": "A classic root beer with a creamy and frothy taste.",
+              "price": 2.99,
+              "image": "[Link to A&W Root Beer image]",
+              "tags": "Sodas"
+            },
+            {
+              "id": 15,
+              "name": "Canada Dry Ginger Ale",
+              "description": "Canada Dry Ginger Ale, a bubbly and refreshing beverage with a hint of ginger flavor.",
+              "price": 2.99,
+              "image": "[Link to Canada Dry Ginger Ale image]",
+              "tags": "Sodas"
+            },
+            {
+              "id": 16,
+              "name": "Pepsi Wild Cherry",
+              "description": "Pepsi infused with the bold and sweet taste of wild cherries.",
+              "price": 2.99,
+              "image": "[Link to Pepsi Wild Cherry image]",
               "tags": "Sodas"
             }
           ]
@@ -277,6 +345,30 @@
               "price": 8.49,
               "image": "images/loaded-nachos.jpg",
               "tags": "Starters"
+            },
+            {
+              "id": 3,
+              "name": "Spinach Artichoke Dip",
+              "description": "Creamy spinach and artichoke dip served with crispy tortilla chips.",
+              "price": 7.99,
+              "image": "images/spinach-artichoke-dip.jpg",
+              "tags": "Starters"
+            },
+            {
+              "id": 4,
+              "name": "Mozzarella Sticks",
+              "description": "Golden and crispy mozzarella sticks served with marinara sauce.",
+              "price": 6.99,
+              "image": "images/mozzarella-sticks.jpg",
+              "tags": "Starters"
+            },
+            {
+              "id": 5,
+              "name": "Buffalo Wings",
+              "description": "Spicy chicken wings tossed in buffalo sauce, served with ranch dressing and celery sticks.",
+              "price": 9.99,
+              "image": "images/buffalo-wings.jpg",
+              "tags": "Starters"
             }
           ]
         },
@@ -298,6 +390,30 @@
               "description": "Crisp lettuce, tomatoes, olives, feta cheese, and Greek dressing.",
               "price": 8.99,
               "image": "images/greek-salad.jpg",
+              "tags": "Salads"
+            },
+            {
+              "id": 5,
+              "name": "Caprese Salad",
+              "description": "Fresh tomatoes, mozzarella cheese, and basil drizzled with balsamic glaze.",
+              "price": 9.49,
+              "image": "images/caprese-salad.jpg",
+              "tags": "Salads"
+            },
+            {
+              "id": 6,
+              "name": "Cobb Salad",
+              "description": "Mixed greens topped with grilled chicken, bacon, hard-boiled eggs, avocado, tomatoes, and blue cheese dressing.",
+              "price": 10.99,
+              "image": "images/cobb-salad.jpg",
+              "tags": "Salads"
+            },
+            {
+              "id": 7,
+              "name": "Waldorf Salad",
+              "description": "A refreshing combination of apples, celery, grapes, walnuts, and mayonnaise dressing.",
+              "price": 8.49,
+              "image": "images/waldorf-salad.jpg",
               "tags": "Salads"
             }
           ]
@@ -405,31 +521,87 @@
           ]
         },
         {
-          "id": 8,
+          "id": 5,
           "name": "Sides",
           "items": [
             {
-              "id": 7,
-              "name": "Fries",
-              "description": "Crispy fries.",
-              "price": 2.99,
-              "image": "images/fries.jpg",
+              "id": 1,
+              "name": "French Fries",
+              "description": "Crispy golden fries seasoned with salt.",
+              "price": 3.49,
+              "image": "images/french-fries.jpg",
               "tags": "Sides"
             },
             {
-              "id": 8,
+              "id": 2,
               "name": "Onion Rings",
-              "description": "Crispy onion rings.",
-              "price": 2.99,
+              "description": "Battered and deep-fried onion rings served with dipping sauce.",
+              "price": 4.49,
               "image": "images/onion-rings.jpg",
               "tags": "Sides"
             },
             {
-              "id": 9,
+              "id": 3,
               "name": "Sweet Potato Fries",
-              "description": "Crispy sweet potato fries.",
-              "price": 2.99,
+              "description": "Sweet and savory sweet potato fries seasoned with cinnamon.",
+              "price": 4.99,
               "image": "images/sweet-potato-fries.jpg",
+              "tags": "Sides"
+            },
+            {
+              "id": 4,
+              "name": "Garlic Bread",
+              "description": "Toasted bread brushed with garlic butter and herbs.",
+              "price": 3.99,
+              "image": "images/garlic-bread.jpg",
+              "tags": "Sides"
+            },
+            {
+              "id": 5,
+              "name": "Cole Slaw",
+              "description": "Shredded cabbage and carrots tossed in creamy coleslaw dressing.",
+              "price": 2.99,
+              "image": "images/cole-slaw.jpg",
+              "tags": "Sides"
+            },
+            {
+              "id": 6,
+              "name": "Mashed Potatoes",
+              "description": "Creamy mashed potatoes seasoned with butter and herbs.",
+              "price": 3.99,
+              "image": "images/mashed-potatoes.jpg",
+              "tags": "Sides"
+            },
+            {
+              "id": 7,
+              "name": "Macaroni and Cheese",
+              "description": "Elbow macaroni pasta baked in a rich and creamy cheese sauce.",
+              "price": 4.99,
+              "image": "images/macaroni-and-cheese.jpg",
+              "tags": "Sides"
+            },
+            {
+              "id": 8,
+              "name": "Seasonal Vegetable Medley",
+              "description": "Fresh seasonal vegetables sautéed in garlic butter.",
+              "price": 5.49,
+              "image": "images/vegetable-medley.jpg",
+              "tags": "Sides"
+            },
+            {
+              "id": 9,
+              "name": "Cornbread",
+              "description": "Moist and buttery cornbread served with honey butter.",
+              "price": 3.49,
+              "image": "images/cornbread.jpg",
+              "tags": "Sides"
+            },
+            {
+              "id": 10,
+              "name": "Loaded Baked Potato",
+              "description": "Baked potato topped with sour cream, cheddar cheese, bacon, and chives.",
+              "price": 5.99,
+              "image": "images/loaded-baked-potato.jpg",
               "tags": "Sides"
             }
           ]
@@ -601,17 +773,94 @@
               "tags": "Burgers"
             }
           ]
+        },
+        {
+          "id": 4,
+          "name": "Sandwiches",
+          "items": [
+            {
+              "id": 1,
+              "name": "Classic BLT",
+              "description": "Crispy bacon, lettuce, and tomato served on toasted bread with mayonnaise.",
+              "price": 9.99,
+              "image": "images/classic-blt.jpg",
+              "tags": "Sandwiches"
+            },
+            {
+              "id": 2,
+              "name": "Grilled Cheese",
+              "description": "Melted cheddar cheese between slices of buttery grilled bread.",
+              "price": 7.99,
+              "image": "images/grilled-cheese.jpg",
+              "tags": "Sandwiches"
+            },
+            {
+              "id": 3,
+              "name": "Turkey Club",
+              "description": "Sliced turkey, bacon, lettuce, tomato, and mayonnaise on toasted bread.",
+              "price": 11.49,
+              "image": "images/turkey-club.jpg",
+              "tags": "Sandwiches"
+            },
+            {
+              "id": 4,
+              "name": "Philly Cheesesteak",
+              "description": "Sliced steak, grilled onions, peppers, and melted provolone cheese on a hoagie roll.",
+              "price": 12.99,
+              "image": "images/philly-cheesesteak.jpg",
+              "tags": "Sandwiches"
+            },
+            {
+              "id": 5,
+              "name": "Chicken Caesar Wrap",
+              "description": "Grilled chicken, romaine lettuce, Parmesan cheese, and Caesar dressing wrapped in a flour tortilla.",
+              "price": 10.99,
+              "image": "images/chicken-caesar-wrap.jpg",
+              "tags": "Sandwiches"
+            },
+            {
+              "id": 6,
+              "name": "Reuben Sandwich",
+              "description": "Corned beef, sauerkraut, Swiss cheese, and Thousand Island dressing on grilled rye bread.",
+              "price": 11.99,
+              "image": "images/reuben-sandwich.jpg",
+              "tags": "Sandwiches"
+            },
+            {
+              "id": 7,
+              "name": "Veggie Panini",
+              "description": "Grilled zucchini, bell peppers, onions, tomatoes, and mozzarella cheese on ciabatta bread.",
+              "price": 9.49,
+              "image": "images/veggie-panini.jpg",
+              "tags": "Sandwiches"
+            },
+            {
+              "id": 8,
+              "name": "Tuna Salad Sandwich",
+              "description": "Tuna salad with celery, onions, and mayonnaise served on whole wheat bread.",
+              "price": 10.49,
+              "image": "images/tuna-salad-sandwich.jpg",
+              "tags": "Sandwiches"
+            },
+            {
+              "id": 9,
+              "name": "Italian Submarine",
+              "description": "Ham, salami, pepperoni, provolone cheese, lettuce, tomato, onions, and Italian dressing on a sub roll.",
+              "price": 11.99,
+              "image": "images/italian-submarine.jpg",
+              "tags": "Sandwiches"
+            },
+            {
+              "id": 10,
+              "name": "BBQ Pulled Pork Sandwich",
+              "description": "Slow-cooked pulled pork smothered in BBQ sauce, served on a brioche bun.",
+              "price": 12.49,
+              "image": "images/bbq-pulled-pork-sandwich.jpg",
+              "tags": "Sandwiches"
+            }
+          ]
         }
       ]
     }
-  ],
-  "subscribe": [],
-  "contact": [],
-  "investors": [],
-  "orders": [],
-  "comments": [],
-  "menus": [],
-  "employment": [],
-  "users": [],
-  "posts": []
+  ]
 }

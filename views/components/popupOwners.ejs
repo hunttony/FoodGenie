@@ -1,0 +1,275 @@
+
+<head>
+  
+  <title>Food Genie | Owners</title>
+  <meta name="description" content="Discover Food Genie, Your Gateway to Culinary Success! Expert SEO, targeted local audiences, and clear calls to action drive hungry diners straight to your restaurant. Showcase your best dishes and watch your revenue soar. Partner with us today!">
+  <meta name="keywords" content="Restaurant advertising, local restaurant promotion, culinary marketing, SEO for restaurants, targeted audience engagement, online restaurant visibility, menu promotion, reservation platform, delivery service promotion, revenue increase strategies, customer engagement platform, culinary showcase, local dining discovery, online ordering platform, restaurant growth solutions">
+   
+</head>
+  
+  <style>
+    .owners-modal {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0, 0, 0, 0.4);
+      transition: all 1s; /* Semi-transparent background */
+    }
+  
+    .owners-modal-content {
+      justify-items: center;
+      background-color: rgba(0, 0, 0, 0.8);
+      
+      margin: 15% auto;
+      padding: 30px;
+      border: 1px solid #888;
+      border-radius: 10px;
+      width: 80%;
+      max-width: 600px;
+      position: relative;
+      transform: slideIn 0.3s;
+    
+      transition: all 1s;
+    }
+  
+    .owners-close {
+      color: #d6d6d6;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+    }
+  
+    .owners-close:hover,
+    .owners-close:focus {
+      color: rgb(255, 0, 0);
+      text-decoration: none;
+      cursor: pointer;
+    }
+  
+    .owners-btn {
+      text-decoration: none;
+      font-size: 16px;
+      color: #ffffff;
+      font-weight: bold;
+      font-family: "Lumanosimo", cursive;
+      font-weight: 600;
+      font-style: normal;
+      transition: all 0.15s ease-in-out;
+      background: none;
+      border: none; 
+    }
+  
+    .owners-btn:hover{
+      text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.8);
+      cursor: pointer;
+    }
+  
+    .food-genie-module {
+      padding: 80px 0;
+    }
+  
+    .owners-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+     
+    }
+  
+    .owners-content {
+      flex-basis: 50%;
+      
+    }
+  
+    .image {
+      flex-basis: 40%;
+    }
+  
+    .owners-content h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      color: coral;
+    }
+
+    .owners-content h3 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      color: coral;
+      margin-right: 10px;
+    }
+  
+    .owners-content p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+  
+    .owners-content ul {
+      list-style: none;
+      margin-bottom: 20px;
+      position: relative;
+    }
+  
+    .owners-content ul li {
+      font-size: 1.1rem;
+      cursor: pointer;
+    }
+  
+    .popup {
+      display: none;
+      position: absolute;
+      top: -280px;
+      right: 50px;
+      width: 90%;
+      overflow: hidden;
+      justify-content: center;
+      align-items: center;
+      
+      padding: 10px;
+      background-color: rgba(0, 0, 0, 0.95);
+      color: #ff5e00;
+      border-radius: 10px;
+      border-style: double;
+      border-color: coral;
+      box-shadow: 0 2px 5px rgb(255, 255, 255);
+      transition: all 1s;
+      z-index: 999;
+    }
+
+    .owners-content ul li:hover {
+      color: coral;
+    }
+  
+    .owners-content ul li:hover .popup {
+      display: flex;
+      
+    }
+  
+    .owner-cta-button {
+      display: inline-block;
+      padding: 15px 30px;
+      background-color: #007bff;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+  
+    .owners-cta-button:hover {
+      background-color: #0056b3;
+    }
+  
+    .image img {
+      width: 100%;
+      height: auto;
+    }
+  
+    @media screen and (max-width: 768px) {
+      .owners-container {
+        flex-direction: column;
+        text-align: center;
+      }
+  
+      .owners-content,
+      .image {
+        flex-basis: 100%;
+      }
+  
+      .owners-content {
+        margin-bottom: 40px;
+      }
+    }
+  </style>
+  
+  <button class="owners-btn" id="open-owners-modal">Owners</button>
+  
+  <div id="owners-modal" class="owners-modal">
+    <div class="owners-modal-content">    
+      <span class="owners-close">&times;</span>
+      <div>
+      <h1>Increase Your Sales</h1>
+      <p>Discover exquisite flavors that will tantalize your taste buds.</p>
+      <button class="order-button">Order Now</button>
+    </div>
+  
+      <div class="food-genie-module">
+        <div class="owners-container">
+          <div class="owners-content">
+            <h2>Discover the Magic of Food Genie</h2>
+            <p>Welcome to Food Genie, your ultimate partner in culinary excellence! Whether you're a seasoned restaurateur or a budding food entrepreneur, our platform offers a wealth of services          <p>designed to catapult your business to new heights. Dive into a world of delectable dishes, innovative marketing strategies, and unparalleled support tailored to your unique needs.</p>
+            <ul>
+              <li>
+                Recipe Promotion
+                <div class="popup">
+                  <h3 >Recipe Promotion</h3>
+                  <p class="animate__animated animate__duration-3s animate__slow animate__fadeInRight">Showcase your signature dishes to a global and targeted local audience. Our SEO-optimized platform ensures maximum visibility for your culinary creations, attracting hungry customers to your doorstep.</p>
+                </div>
+              </li>
+              <li>
+                Digital Marketing Solutions
+                <div class="popup">
+                  <h3>Digital Marketing Solutions</h3>
+                  <p class="animate__animated animate__duration-3s animate__slow animate__fadeInRight">Leverage the power of google SEO and social media, email marketing, and targeted advertising to expand your reach and engage with your audience effectively. Our team of experts will craft compelling campaigns tailored to your brand identity and business objectives.</p>
+                </div>
+              </li>
+              <li>
+                Menu Enhancement
+                <div class="popup">
+                  <h3>Menu Enhancement</h3>
+                  <p class="animate__animated animate__duration-3s animate__slow animate__fadeInRight">Enhance your menu with expert guidance from our seasoned chefs. We'll help you curate a diverse and enticing selection of dishes that captivate diners and keep them coming back for more.</p>
+                  
+                </div>
+              </li>
+              <li>
+                Online Ordering Integration
+                <div class="popup">
+                  <h3>Online Ordering Integration</h3>
+                  <p class="animate__animated animate__duration-3s animate__slow animate__fadeInRight">Streamline your operations and boost revenue with seamless online ordering. Our intuitive platform allows customers to order directly from your website, providing convenience and satisfaction with every click.</p>
+                  
+                </div>
+              </li>
+              <li>
+                Customer Engagement
+                <div class="popup">
+                  <h3>Customer Engagement</h3>
+                  <p class="animate__animated animate__duration-3s animate__slow animate__fadeInRight">Foster meaningful connections with your patrons through personalized experiences and loyalty programs. From special promotions to exclusive events, we'll help you nurture a loyal customer base that drives repeat business and referrals.</p>
+                </div>
+              </li>
+            </ul>
+            <a href="#" class="owners-cta-button">Get Started</a>
+          </div>
+          <div class="image">
+            <img src="food-genie-image.jpg" alt="Food Genie Image">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <script>
+    var openOwnersModalBtn = document.getElementById('open-owners-modal');
+    var ownersModal = document.getElementById('owners-modal');
+  
+    openOwnersModalBtn.onclick = function() {
+      ownersModal.style.display = 'block';
+    };
+  
+    var ownersCloseBtn = document.getElementsByClassName('owners-close')[0];
+    ownersCloseBtn.onclick = function() {
+      ownersModal.style.display = 'none';
+    };
+  
+    window.onclick = function(event) {
+      if (event.target == ownersModal) {
+        ownersModal.style.display = 'none';
+      }
+    };
+  </script>
+  </html>
+  

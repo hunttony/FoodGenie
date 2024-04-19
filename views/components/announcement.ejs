@@ -1,16 +1,26 @@
 <style>
+
+
+.announcement-div {
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */  
+  
+}
+  
   /* Add your CSS styles here */
   .announcement-container {
   display: flex;
   justify-content: center; /* Center horizontally */
   align-items: center; /* Center vertically */
-  height: 30vh;
+  
+  
   
 }
 
 .announcement {
   padding: 10px;
-  margin: 10px 0;
+  margin: 10px;
   background-color: rgba(0, 0, 0, 0.3);
   color: #fff;
   border-radius: 45px;
@@ -91,18 +101,20 @@
       opacity: 1;
     }
     to {
-      opacity: 0;
+      opacity: 0 class="announcement-div";
     }
   }
 </style>
 
 
-  <div class="announcements" id="announcements" >
-    <h2>Announcements</h2>
+  <div class="announcement-div">
+    <div class="announcements" id="announcements" >
+    
     <div class="announcement-container">
       
      <!-- Announcement containers go here --></div>
   </div>
+</div>
   
 
 <script>

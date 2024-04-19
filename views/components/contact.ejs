@@ -7,11 +7,11 @@
       <div class="col-md-6">
         <div class="contact-info">
           <h2>Contact</h2>
-          <p>Contact us at: <a href="mailto:{{contact.email}}">{{contact.email}}</a></p>
-          <p>Or call us at: <a href="tel:{{contact.phone}}">{{contact.phone}}</a></p>
-          <p>Our address is: <a href="https://www.google.com/maps/place/{{contact.address}}">{{contact.address}}</a></p>
+          <p>Contact us at: <a href="mailto:{ahunt3542@gmail.com}">Email.com</a></p>
+          <p>Or call us at: <a href="tel:{346-316-6075}">346-316-6075</a></p>
+          <p>Our address is: <a href="https://www.google.com/maps/place/{houston,tx}">Houston, Texas</a></p>
           <p>Our hours are: {{contact.hours}}</p>
-          <p>Our website is: <a href="{{contact.website}}">{{contact.website}}</a></p>
+          <p>Our website is: <a href="https://restaurant-9xcg.onrender.com/">Your Restaurant</a></p>
           <p>Follow us on social media:</p>
           <ul class="social-media-list">
             <li><a href="{{contact.socialMedia}}">Social Media</a></li>
@@ -27,7 +27,7 @@
       <div class="col-md-6">
         <div class="contact-form">
           <h2>Contact Form</h2>
-          <form action="/contact" method="POST">
+          <form action="/contact/contact" method="POST" id="contactForm">
             <div class="form-group">
               <input type="text" class="form-control" id="name" name="name" placeholder="Name">
             </div>
@@ -43,9 +43,59 @@
             <button type="submit" class="btn btn-primary">Submit</button>
           </form>
         </div>
+        <div class="contact-success" id="contactSuccessMessage" style="display: none;">
+          <h2>Thank You!</h2>
+          <p>Your message has been successfully submitted.</p>
+          <p>Name: <span id="submittedName"></span></p>
+          <p>Email: <span id="submittedEmail"></span></p>
+          <p>Subject: <span id="submittedSubject"></span></p>
+          <p>Message: <span id="submittedMessage"></span></p>
+        </div>
       </div>
     </div>
       </div>
    
- 
+      <script>
+        // Function to show the success message
+        function showFormSuccess() {
+          document.getElementById('contactSuccessMessage').style.display = 'block';
+        }
+      
+        // Function to handle form submission
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+          event.preventDefault(); // Prevent the default form submission
+      
+          // Get form data
+          const name = document.getElementById('name').value;
+          const email = document.getElementById('email').value;
+          const subject = document.getElementById('subject').value;
+          const message = document.getElementById('message').value;
+      
+          // Send the form data to the server using AJAX or fetch
+          fetch('/contact', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ name, email, subject, message })
+          })
+          .then(response => {
+            if (response.ok) {
+              // Show the success message
+              showFormSuccess();
+              // Clear the form fields
+              document.getElementById('name').value = '';
+              document.getElementById('email').value = '';
+              document.getElementById('subject').value = '';
+              document.getElementById('message').value = '';
+            } else {
+              console.error('Failed to submit form:', response.statusText);
+            }
+          })
+          .catch(error => {
+            console.error('Error submitting form:', error);
+          });
+        });
+      </script>
+      
 

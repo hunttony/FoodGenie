@@ -1,0 +1,120 @@
+<!-- contactSuccess.ejs -->
+
+
+
+<style>
+  /* Add your CSS styles for the success message here */
+ 
+
+@keyframes gradient {
+0% {
+  background-position: 0% 50%;
+}
+50% {
+  background-position: 100% 50%;
+}
+100% {
+  background-position: 0% 50%;
+}
+}
+
+.success{
+  background: linear-gradient(-45deg, #000000, #ff7300);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+}
+
+.success-message {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  z-index: 9999;
+  background: linear-gradient(-45deg, #ff3366, #ffa033);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  animation: fadeIn 0.5s ease forwards, slideIn 0.5s ease forwards;
+}
+
+
+@keyframes gradient {
+0% {
+  background-position: 0% 50%;
+}
+50% {
+  background-position: 100% 50%;
+}
+100% {
+  background-position: 0% 50%;
+}
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideIn {
+  from { transform: translate(-50%, -100%); }
+  to { transform: translate(-50%, -50%); }
+}
+
+.success-message img {
+  width: 100px;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.success-message h1 {
+  font-size: 2rem;
+}
+
+.success-message h2 {
+  font-size: 1.5rem;
+}
+
+.success-message p {
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+.back-button {
+  background-color: #fff;
+  color: #333;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.back-button:hover {
+  background-color: #ccc;
+}
+
+
+  
+</style>
+
+<div class="success" >
+  
+  <div class="success-message">
+    <img src="/images/Restaurant_logo.png" alt="Your Restaurant Logo">
+    <h1>Thank You!</h1>
+    <h2>Your employment application has been successfully submitted.</h2>
+    <p>Name: <%= name %></p>
+    <p>Email: <%= email %></p>
+    <p>Phone: <%= phone %></p>
+    <p>Days available: <%= days_available %></p>
+    <p>Hours available: <%= hours_available %></p>
+    <p>Previous employer: <%= previous_employer %></p>
+    <p>Previous employer: <%= previous_position %></p>
+    <button type="button" class="back-button" onclick="history.back()">Back</button>
+  </div>
+  
+
+
+</div>
